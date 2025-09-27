@@ -1,4 +1,5 @@
 plugins {
+	idea
 	kotlin("jvm") version "1.9.25"
 	kotlin("plugin.spring") version "1.9.25"
 	id("org.springframework.boot") version "3.5.6"
@@ -12,6 +13,13 @@ description = "Demo project for Spring Boot"
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+idea {
+	module {
+		isDownloadJavadoc = true
+		isDownloadSources = true
 	}
 }
 
